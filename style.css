@@ -1,0 +1,55 @@
+:root{
+    --logo-height:100px;
+    --img-width:30vw;
+    font-size: 16px;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+body *{
+    margin: 0;
+    box-sizing: border-box;
+}
+.image-container{
+    position: relative;
+    font-family: 'Lilita One', cursive;
+    font-size: 3rem;
+    color: white;
+}
+.background-img{
+    width: var(--img-width);
+    height: 100vh;
+}
+.banner img{
+    width: auto;
+    scale: 1.5;
+    margin-right: 20px;
+    
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    position: absolute;
+    top: calc((100vh - var(--logo-height))/2);
+    width: var(--img-width);
+    height: var(--logo-height);
+    display: grid;
+    place-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
