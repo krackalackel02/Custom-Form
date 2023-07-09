@@ -7,14 +7,16 @@
 	--logo-height: 100px;
 	--img-width: 30vw;
 	--logo-font-wght: 300;
-	--form-font-wght: 700;
+	--form-font-wght: 900;
 	--logo-font-size: 3rem;
+	--form-font-size:1.1rem;
 	--logo-font-colour: white;
 	--logo-background-colour: rgba(0, 0, 0, 0.377);
 	--primary-colour: #ebded3;
 	--secondary-colour: #fff9f0;
 	--accent-colour: #8d7355;
 	--accent2-colour: #ad8659;
+	--form-width: 60%;
 }
 
 body {
@@ -39,8 +41,37 @@ body * {
 }
 .form-container > div:first-child,
 .button button,
-.signup > p {
+.signup > p,
+.form {
 	font-weight: var(--form-font-wght);
+}
+.form{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	/* width: var(--form-width); */
+	font-size: calc(0.5*var(--form-font-size));
+	margin: 30px 0;
+	gap: 30px;
+	/* padding-right: 5; */
+}
+.form>*{
+	/* flex: 1 0 50%; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	width: 40%;
+	min-width: 300px;
+	/* flex-grow: 1; */
+	/* flex-shrink: 1; */
+}
+.form div > input{
+	width: 100%;
+}
+.form-container > div:first-child,
+.signup > p {
+	font-size: var(--form-font-size);
 }
 .signup {
 	background-color: var(--secondary-colour);
@@ -80,6 +111,7 @@ body * {
 	place-content: center;
 	background-color: var(--logo-background-colour);
 	text-align: center;
+	color: var(--logo-font-colour);
 }
 
 .button button:hover {
@@ -91,10 +123,12 @@ body * {
 	box-shadow: 2px 2px 4px var(--secondary-colour);
 	background-color: var(--accent-colour);
 	transition: all 1s;
-	border-radius: 10px;
-	padding: 7px 30px;
+	border-radius: 5px;
+	padding: 10px 30px;
 	margin-left: 0;
 	font-weight: var(--form-font-wght);
+	border: none;
+	color: var(--logo-font-colour);
 }
 .login span:hover {
 	cursor: pointer;
