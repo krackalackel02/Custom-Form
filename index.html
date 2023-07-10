@@ -21,6 +21,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="image-container">
@@ -33,20 +34,22 @@
 			<div class="logo">
 				<p class="banner">
 					<span class="material-symbols-outlined"> airplane_ticket </span>
-					Book Now!
+					<a href="#form">Book Now!</a>
 				</p>
 			</div>
 		</div>
 		<div class="form-container">
 			<div class="intro-text">
-				This is not a real online service! You know you need something like this
-				in your life to help you realize your deepest dreams. Sign up now to get
-				started. <p>You <em>know</em> you want to.</p>
+				<p>
+					This is not a real online service! You know you need something like this
+					in your life to help you realize your deepest dreams. Sign up now to get
+					started. <p>You <em>know</em> you want to.</p>
+				</p>
 			</div>
 			<div class="signup">
 				<p>Let's do this!</p>
 				<div>
-					<form action="" class="form">
+					<form action="" class="form" id="form">
 						<div>
 							<label for="first-name">FIRST NAME</label>
 							<input type="text" name="first-name" id="first-name">
@@ -80,6 +83,18 @@
 			<div class="login">
 				<p>Already have an account? <span>Log in</span></p>
 			</div>
+			<footer class="footer">
+				<p>
+				  Copyright ©
+				  <script>
+					document.write(new Date().getFullYear())
+				  </script>
+				  Krackalackel02
+				  <a href="https://github.com/krackalackel02" target="_blank">
+					<i class="fab fa-github"></i
+				  ></a>
+				</p>
+			  </footer>
 		</div>
 	</body>
 </html>

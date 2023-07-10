@@ -6,14 +6,16 @@
 :root {
 	--logo-height: 100px;
 	--img-width: 30vw;
+	--img-height: 100vh;
 	--logo-font-wght: 300;
 	--form-font-wght: 900;
 	--logo-font-size: 3rem;
-	--form-font-size:1.1rem;
+	--form-font-size: 1.1rem;
 	--logo-font-colour: white;
 	--logo-background-colour: rgba(0, 0, 0, 0.377);
 	--primary-colour: #ebded3;
 	--secondary-colour: #fff9f0;
+	--secondary-colour: #fff;
 	--accent-colour: #8d7355;
 	--accent2-colour: #ad8659;
 	--form-width: 60%;
@@ -45,17 +47,17 @@ body * {
 .form {
 	font-weight: var(--form-font-wght);
 }
-.form{
+.form {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	/* width: var(--form-width); */
-	font-size: calc(0.5*var(--form-font-size));
+	font-size: calc(0.5 * var(--form-font-size));
 	margin: 30px 0;
 	gap: 30px;
 	/* padding-right: 5; */
 }
-.form>*{
+.form > * {
 	/* flex: 1 0 50%; */
 	display: flex;
 	flex-direction: column;
@@ -66,16 +68,17 @@ body * {
 	/* flex-grow: 1; */
 	/* flex-shrink: 1; */
 }
-.form div > input{
+.form div > input {
 	width: 100%;
 }
 .form-container > div:first-child,
 .signup > p {
+	margin-top: 20px;
 	font-size: var(--form-font-size);
 }
 .signup {
 	background-color: var(--secondary-colour);
-    box-shadow: 0 2px 10px black;
+	box-shadow: 0 5px 10px var(--logo-background-colour);
 }
 .intro-text {
 	margin-bottom: 30px;
@@ -104,7 +107,7 @@ body * {
 }
 .logo {
 	position: absolute;
-	top: calc((100vh - var(--logo-height)) / 2);
+	top: calc((var(--img-height) - var(--logo-height)) / 2);
 	width: var(--img-width);
 	height: var(--logo-height);
 	display: grid;
@@ -154,6 +157,10 @@ body * {
 .material-symbols-outlined {
 	transition: all 1s;
 }
+.banner a {
+	text-decoration: none;
+	color: var(--secondary-colour);
+}
 .image-container:hover .logo {
 	--logo-font-wght: 900;
 	cursor: pointer;
@@ -162,7 +169,7 @@ body * {
 /* Cross Fade Animation */
 .container {
 	width: var(--img-width);
-	height: 100vh;
+	height: var(--img-height);
 	position: relative;
 }
 .background-img {
@@ -226,5 +233,65 @@ body * {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+* {
+	scroll-behavior: smooth !important;
+}
+.form div {
+	gap: 5px;
+}
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.fa-github {
+	color: black;
+	font-size: 40px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+	transform: rotate(360deg) scale(1.2);
+}
+@media screen and (max-width: 800px) {
+	:root {
+		--img-width: 100vw;
+	}
+	body {
+		height: auto;
+		display: block;
+	}
+	.form-container,
+	.form-container > div {
+		width: 100vw;
+	}
+	.form {
+		align-items: center;
+		flex-direction: column;
+	}
+	.form-container > div:not(.signup),
+	.signup > * {
+		margin-left: 0px;
+	}
+	p {
+		text-align: center;
+	}
+	.button {
+		display: grid;
+		place-content: center;
+	}
+	.intro-text p {
+		padding: 0 20px;
+	}
+	.form-container {
+		height: 100vh;
 	}
 }
