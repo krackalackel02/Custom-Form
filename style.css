@@ -115,6 +115,7 @@ body * {
 	background-color: var(--logo-background-colour);
 	text-align: center;
 	color: var(--logo-font-colour);
+	animation: font 2s alternate infinite;
 }
 
 .button button:hover {
@@ -162,9 +163,20 @@ body * {
 	color: var(--secondary-colour);
 }
 .image-container:hover .logo {
-	--logo-font-wght: 900;
+	/* --logo-font-wght: 900; */
 	cursor: pointer;
 }
+
+@keyframes font {
+	0%{
+		--logo-font-wght: 300;
+	}
+	100%{
+		
+		--logo-font-wght: 900;
+	}
+}
+
 
 /* Cross Fade Animation */
 .container {
@@ -290,8 +302,5 @@ body * {
 	}
 	.intro-text p {
 		padding: 0 20px;
-	}
-	.form-container {
-		height: 100vh;
 	}
 }
