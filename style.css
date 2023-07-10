@@ -12,7 +12,27 @@
 	opacity: 0;
 	position: absolute;
   }
-  
+  form input.validate:invalid,
+form.validate input:invalid {
+    border: none;
+    outline: 2px solid red;
+}
+
+form label div {
+    color: red;
+    display: block;
+    font-weight: normal;
+    text-transform: none;
+}
+.form label{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+  .required{
+	
+	color: red;
+  }
   .checkbox-label {
 	background-color: #111;
 	width: 50px;
