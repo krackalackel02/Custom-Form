@@ -2,7 +2,51 @@
 	font-family: "movement";
 	src: url("Movement/Variable/MovementV.ttf") format("truetype");
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.mode-toggle{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+  }
+  
+  .checkbox-label {
+	background-color: #111;
+	width: 50px;
+	height: 26px;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  .fa-moon {color: #f1c40f;}
+  
+  .fa-sun {color: #f39c12;}
+  
+  .checkbox-label .ball {
+	background-color: #fff;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+  }
+  *{
+	transition: all 0.5s;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+	transform: translateX(24px);
+  }
 :root {
 	--logo-height: 100px;
 	--img-width: 40vw;
@@ -311,11 +355,11 @@ input:focus {
 	}
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root {
-	  --text-font-colour: #fff; /* Change text color to white */
-	  --primary-colour: #2c2927; /* Adjust primary color */
-	  --secondary-colour: #393532; /* Adjust secondary color */
+	  --text-font-colour: #fff;
+	  --primary-colour: #2c2927;
+	  --secondary-colour: #393532; 
 	  --accent-colour: #ad8659;
 	  --accent2-colour: #8d7355;
 	}
@@ -330,4 +374,19 @@ input:focus {
 		--accent-colour: #8d7355;
 		--accent2-colour: #ad8659;
 	}
+} */
+:root{
+	--text-font-colour: rgb(0, 0, 0);
+		--primary-colour: #ebded3;
+		--secondary-colour: #fff;
+		--accent-colour: #8d7355;
+		--accent2-colour: #ad8659;
+}
+
+:root.dark{
+	--text-font-colour: #fff; /* Change text color to white */
+	  --primary-colour: #2c2927; /* Adjust primary color */
+	  --secondary-colour: #393532; /* Adjust secondary color */
+	  --accent-colour: #ad8659;
+	  --accent2-colour: #8d7355;
 }
