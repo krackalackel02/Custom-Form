@@ -5,7 +5,7 @@
 
 :root {
 	--logo-height: 100px;
-	--img-width: 30vw;
+	--img-width: 40vw;
 	--img-height: 100vh;
 	--logo-font-wght: 300;
 	--form-font-wght: 900;
@@ -73,7 +73,7 @@ body * {
 }
 .form-container > div:first-child,
 .signup > p {
-	margin-top: 20px;
+	margin-top: 10px;
 	font-size: var(--form-font-size);
 }
 .signup {
@@ -81,7 +81,7 @@ body * {
 	box-shadow: 0 5px 10px var(--logo-background-colour);
 }
 .intro-text {
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 }
 .intro-text p,
 .button,
@@ -257,9 +257,7 @@ body * {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px;
 	width: 100%;
-	padding: 10px;
 	font-size: 20px;
 	text-align: center;
 }
@@ -273,7 +271,7 @@ body * {
 .fa-github:hover {
 	transform: rotate(360deg) scale(1.2);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	:root {
 		--img-width: 100vw;
 	}
